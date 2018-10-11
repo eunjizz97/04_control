@@ -18,8 +18,9 @@ int main(int argc, char *argv[]) {
 		if (guess>59)
 			printf("High!\n");
 			
-		else
+		else if (guess<59)		//trial=1일 때 맞추는 것을 생각 못함 -> 수정  
 			printf("Low!\n");
+			
 	}
 	while (guess != 59);
 	
