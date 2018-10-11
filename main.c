@@ -5,18 +5,25 @@
 
 int main(int argc, char *argv[]) {
 	
-	int num;
-	int plus=0;		//더하는 수 
-	int sum=0;		//더하기 결과를 저장하는 변수 저장 
+	int answer = 59;
+	int guess;
+	int trial=0;
 	
-	printf("input a number : ");
-	scanf("%d", &num);
-	
-	for(plus=0;plus<=num;plus++)
+	do
 	{
-		sum = sum + plus;
+		printf("Guess a number : ");
+		scanf("%d", &guess);
+		trial++;
+		
+		if (guess>59)
+			printf("High!\n");
+			
+		else
+			printf("Low!\n");
 	}
-	printf("the result is %d", sum);
+	while (guess != 59);
+	
+	printf("Congratulation! trials : %d", trial);
 	
 	return 0;
 }
