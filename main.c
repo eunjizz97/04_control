@@ -5,23 +5,18 @@
 
 int main(int argc, char *argv[]) {
 	
-	int num = 0;		//숫자의 개수 
-	char str[100];
-	char c;
+	int num;
+	int plus=0;		//더하는 수 
+	int sum=0;		//더하기 결과를 저장하는 변수 저장 
 	
-	//string
-	printf("input a string : ");
+	printf("input a number : ");
+	scanf("%d", &num);
 	
-	while( (c=getchar() )!='\n')
+	for(plus=0;plus<=num;plus++)
 	{
-		if ('0'<=c && c<='9')
-			num = num + 1;
-			
-		else
-			num = num + 0;
+		sum = sum + plus;
 	}
-	
-	printf("the number of digits is %d\n", num);
+	printf("the result is %d", sum);
 	
 	return 0;
 }
