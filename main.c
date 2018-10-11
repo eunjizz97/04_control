@@ -5,16 +5,22 @@
 
 int main(int argc, char *argv[]) {
 	
-	int in;
+	char ch;
 	
-	printf("정수 하나를 입력하시오 : ");
-	scanf("%d", &in);
+	printf("input a char : ");
+	scanf("%c", &ch);
 	
-	if (in >= 0)
-		printf("절댓값은 %d 입니다.\n", in);
+	if ('A' <= ch && ch <= 'Z')
+		printf("this is a capital letter.\n");
+		
+	else if ('a' <= ch && ch <= 'z')
+		printf("this is a small letter.\n");
+		
+	else if ('0' <= ch && ch <= '9')
+		printf("this is a number char.\n");
 		
 	else
-		printf("절댓값은 %d 입니다.\n", -in);
+		printf("기타입니다.");
 		
 		
 	return 0;
