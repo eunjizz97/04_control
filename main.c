@@ -5,23 +5,33 @@
 
 int main(int argc, char *argv[]) {
 	
-	char ch;
+	int month;
+	int day;		//일수를 계산하는 변수 
 	
-	printf("input a char : ");
-	scanf("%c", &ch);
+	printf("input the month : ");
+	scanf("%i", &month);
 	
-	if ('A' <= ch && ch <= 'Z')
-		printf("this is a capital letter.\n");
+	switch (month) {
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:
+			day = 31;
+			break;
+			
+		case 2:
+			day = 28;
+			break;
+			
+		default:
+			day = 30;
+			break;
+	}
 		
-	else if ('a' <= ch && ch <= 'z')
-		printf("this is a small letter.\n");
-		
-	else if ('0' <= ch && ch <= '9')
-		printf("this is a number char.\n");
-		
-	else
-		printf("기타입니다.");
-		
-		
+	printf("the day is %d", day);
+	
 	return 0;
 }
